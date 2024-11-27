@@ -1,0 +1,1934 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Professional Portfolio</title>
+
+    <!-- Bootstrap 5 CDN -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        /* General Styles */
+        body,
+        html {
+            font-family: 'Roboto', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #1c1c1e;
+            /* Dark background */
+            color: #e5e5e5;
+            /* Light text for contrast */
+            margin: 0;
+            padding: 0;
+        }
+
+       
+
+
+        /* Home Section */
+        #home {
+            height: 100vh;
+            background: url('your-background-image.jpg') center center / cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            /* Align text to the left */
+            padding: 0 20px;
+            transition: background-color 0.5s ease;
+        }
+
+        .home-container {
+            display: flex;
+            justify-content: flex-start;
+            /* Align the content to the left */
+            align-items: center;
+            flex-direction: row;
+            /* Place image on the right and text/icons on the left */
+            width: 100%;
+            max-width: 1200px;
+            /* Set a max width to avoid stretching */
+            margin-left: 15px;
+            /* Add left margin to center the content */
+        }
+
+        .text-content {
+            color: white;
+            max-width: 90%;
+            /* Limit text width for better readability */
+            text-align: left;
+            /* Align text to the left */
+            margin-right: 8rem;
+            /* Space between text and image */
+            margin-top: 9rem;
+        }
+
+        #home h1 {
+            font-size: 4rem;
+            opacity: 0;
+            transform: translateY(20px) rotate(-10deg);
+            transition: opacity 1s ease, transform 1s ease, color 0.7s ease, text-shadow 0.3s ease;
+            color: #ff5733;
+            /* Orange color for better contrast */
+            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.7), 0 1px 3px rgba(0, 0, 0, 0.5);
+            /* Dark shadow for contrast */
+        }
+
+        #home h3 {
+            font-size: 2rem;
+            opacity: 0;
+            transform: translateY(20px) rotate(10deg);
+            transition: opacity 1.2s ease, transform 1.2s ease, color 0.7s ease, text-shadow 0.3s ease;
+            color: #3399ff;
+            /* Blue color for better contrast */
+            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.3);
+            /* Dark shadow for contrast */
+        }
+
+        #home p.description {
+            font-size: 1.2rem;
+            opacity: 0;
+            transform: translateY(20px) scale(0.5);
+            transition: opacity 1.2s ease, transform 1.5s ease, color 0.7s ease, text-shadow 0.3s ease;
+            color: #f2f2f2;
+            /* Light gray for description */
+            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.3);
+            /* Dark shadow for contrast */
+        }
+
+        /* Spinning Border Effect Around Image */
+        .image-wrapper {
+            display: inline-block;
+            position: relative;
+            /* animation: spin-border 10s linear .5s; */
+            /* Spinning border */
+            border-radius: 50%;
+            padding: 8px;
+            /* Space for border */
+            background-color: transparent;
+            border: 5px solid #192950;
+            /* Dark blue border around the image */
+
+        }
+
+        .home-image {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+   
+
+        #home:hover .home-image {
+            transform: scale(1.1);
+            width: 300px;
+            height: 300px;
+            /* position: absolute; */
+            top: 70%;
+            left: 70%;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 255, 255, 0.5);
+            animation: shadow-rotate 1.5s linear infinite;
+            transform-origin: center;
+
+        }
+
+
+        #home:hover h1{
+            opacity: 1;
+            transform: translateY(0) rotate(0deg) scale(1);
+            color: #050505;
+            /* Cyan color for text on hover */
+            text-shadow: 0 1px 3px rgba(152, 152, 154, 0.8);
+            /* Cyan glow effect on hover */
+            font-weight: bolder;
+        }
+        #home:hover h3 {
+            opacity: 1;
+            transform: translateY(0) rotate(0deg) scale(1);
+            color: #00ffff;
+            /* Cyan color for text on hover */
+            text-shadow: 0 2px 5px rgba(0, 255, 255, 0.8);
+            /* Cyan glow effect on hover */
+        }
+
+        #home:hover p.description {
+            opacity: 1;
+            transform: translateY(0) rotate(0deg) scale(1);
+            color: #f9fafa;
+
+            /* Cyan color for text on hover */
+            text-shadow: 0 2px 5px rgba(224, 224, 224, 0.8);
+            /* Cyan glow effect on hover */
+        }
+
+        #home:hover {
+            background-color: rgba(7, 53, 53, 0.5);
+        }
+        #skills:hover {
+            background-color: rgba(7, 53, 53, 0.5);
+        }
+        #projects:hover {
+            background-color: rgba(7, 53, 53, 0.5);
+        }
+        #hobbies:hover {
+            background-color: rgba(7, 53, 53, 0.5);
+        }
+        #contact:hover {
+            background-color: rgba(7, 53, 53, 0.5);
+        }
+        
+
+        /* Social Media Icons Below Text */
+        .social-icons {
+            display: flex;
+            justify-content: flex-start;
+            /* Align the icons to the left */
+            gap: 15px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            /* Space between icons and button */
+            flex-direction: row;
+            /* Align icons in a row under text */
+        }
+
+        .social-icon {
+            font-size: 1.5rem;
+            color: #e5e5e5;
+            display: flex;
+            /* Use flex to center the icon */
+            justify-content: center;
+            /* Center horizontally */
+            align-items: center;
+            /* Center vertically */
+            width: 15px;
+            height: 15px;
+            background-color: #1e2a47;
+            border-radius: 50%;
+            margin-bottom:  0;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-icon i {
+            /* Ensures the icon is centered and doesn't exceed the size of the container */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            /* Adjust the icon size to fit within the circle */
+        }
+        .social-icon:hover i {
+            color: #1e2a47;
+            z-index: 100;
+            /* Cyan background on hover */
+            transform: scale(1.1);
+
+        }
+
+        .social-icon:hover {
+            color: #1e2a47;
+            background-color: #00ffff;
+            /* Cyan background on hover */
+            transform: scale(1.1);
+
+        }
+
+        /* Call to Action Button */
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #1e2a47;
+            color: #e5e5e5;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 25px;
+            margin-bottom: 2rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #00ffff;
+            /* Cyan color on hover */
+            color: #1e2a47;
+            transform: translateY(-3px);
+        }
+
+        /* Keyframes for Spinning Border Effect */
+        @keyframes spin-border {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Mobile responsiveness */
+        
+
+@media only screen and (min-width: 200px) and (max-width: 1024px) {
+
+#home h1 {
+    font-size: 1.2rem;
+}
+
+#home h3 {
+    font-size: .8rem;
+}
+
+#home p.description {
+    font-size: .6rem;
+}
+
+.home-container {
+    flex-direction: column;
+    /* Stack content vertically on small screens */
+    text-align: center;
+}
+
+.text-content {
+    max-width: 100%;
+    /* Full width for text content on smaller screens */
+    margin-bottom: 5px;
+    margin-top: 2rem;
+}
+
+.image-wrapper {
+    padding: 3px;
+}
+.pic{
+    box-sizing: border-box;
+    margin-top: 2rem;
+}
+
+.social-icons {
+    gap: 2px;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.cta-button {
+    padding: 5px 15px;
+    font-size: .8rem;
+    margin-bottom: 20px;
+}
+#home{
+    height: 1000px;
+    /* width: 500px; */
+}
+}
+
+
+
+
+        /* About Section */
+        #about {
+            background: linear-gradient(135deg, #1e2a47 0%, #0d1222 100%);
+            /* Dark blue-black gradient */
+            padding: 60px 20px;
+            color: #f1f1f1;
+            transition: background-color 0.5s ease;
+            position: relative;
+            overflow: hidden;
+            /* Prevent background animation from overflowing */
+        }
+
+        /* Animated Gradient Background */
+        @keyframes gradientBackground {
+            0% {
+                background: linear-gradient(135deg, #1e2a47 0%, #0d1222 100%);
+            }
+
+            50% {
+                background: linear-gradient(135deg, #00bcd4 0%, #1e2a47 100%);
+            }
+
+            100% {
+                background: linear-gradient(135deg, #1e2a47 0%, #0d1222 100%);
+            }
+        }
+
+        #about {
+            animation: gradientBackground 10s ease infinite;
+        }
+
+        #about .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .about-header h2 {
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+
+        /* On hover, the header can scale slightly and change opacity */
+        #about:hover .about-header h2 {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+
+        /* Profile Image Wrapper */
+        .about-image-wrapper {
+            display: inline-block;
+            margin-bottom: 40px;
+            position: relative;
+            /* animation: spin-border 10s linear .5; */
+        }
+
+        /* Profile Image Styling */
+        .about-image {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .about-image-wrapper:hover .about-image {
+            transform: scale(1.1);
+            box-shadow: 0 10px 40px rgba(0, 255, 255, 0.5);
+        }
+
+        /* Animated Text Fade-In Effect */
+        .about-description .description-text {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            color: #dcdcdc;
+            line-height: 1.6;
+            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1.5s ease forwards 1s;
+            /* Fade-in with slight delay */
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #00bcd4;
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-transform: uppercase;
+            margin-top: 20px;
+        }
+
+        /* Add a glowing effect on hover */
+        .cta-button:hover {
+            background-color: #ff5733;
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px rgba(255, 87, 51, 0.8);
+            /* Glowing effect */
+        }
+
+        .skills-icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            font-size: 3rem;
+            opacity: 0;
+            animation: fadeIn 2s ease forwards 2s;
+            /* Fade-in animation for icons */
+        }
+
+        /* Add some hover effect for icons */
+        .skills-icons i {
+            color: #ffffff;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .skills-icons i:hover {
+            transform: scale(1.2);
+            color: #00bcd4;
+            /* Cyan color when hovered */
+        }
+
+        /* Keyframes for Spinning Border Effect */
+        @keyframes spin-border {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @media (max-width: 768px) {
+            #about .container {
+                padding: 20px;
+            }
+
+            .about-header h2 {
+                font-size: 2.5rem;
+            }
+
+            .about-description {
+                font-size: 1.1rem;
+            }
+
+            .cta-button {
+                padding: 10px 25px;
+            }
+
+            .skills-icons {
+                gap: 20px;
+            }
+        }
+
+
+
+
+
+        /* Skills Section */
+        .skills {
+            padding: 60px 20px;
+            background-color: #121212;
+            /* Dark background for contrast */
+            text-align: center;
+            color: #f1f1f1;
+            border-radius: 10px;
+            /* Soft rounded corners */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            /* Subtle shadow for depth */
+        }
+
+        .skills-header h2 {
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+            transition: transform 0.5s ease, opacity 0.5s ease;
+            padding-bottom: 5rem;
+        }
+
+        /* On hover, the header can scale slightly and change opacity */
+        .skills:hover h2 {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+
+
+        /* Carousel Section */
+        .skills-carousel {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 5px;
+            overflow: hidden;
+            position: relative;
+            animation: slide 20s infinite linear;
+            /* Slowed down the carousel animation */
+        }
+
+        /* Skill Item Animation */
+        .skill-item { 
+            text-align: center;
+            max-width: 220px;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeInUp .2s forwards;
+            margin-top: 2rem;
+            /* animation-delay: .1s; */
+        }
+
+        .skill-name {
+            font-size: 1.8rem;
+            /* Increased size for better readability */
+            color: #ffffff;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .circle-progress {
+            width: 160px;
+            /* Slightly larger circle */
+            height: 160px;
+            border-radius: 50%;
+            border: 10px solid #ddd;
+            background: conic-gradient(#00bcd4 0% 0%, #ddd 0% 100%);
+            position: relative;
+            margin: 0 auto;
+            transition: background 4s ease, transform 1s ease-in-out;
+            /* Smooth and slow transition */
+        }
+
+        .circle-progress[data-skill="90"] {
+            background: conic-gradient(#00bcd4 0% 90%, #f7f8f9 90% 100%);
+        }
+
+        .circle-progress[data-skill="85"] {
+            background: conic-gradient(#00bcd4 0% 85%, #f7f8f9 85% 100%);
+        }
+
+        .circle-progress[data-skill="80"] {
+            background: conic-gradient(#00bcd4 0% 80%, #f7f8f9 80% 100%);
+        }
+
+        .circle-progress[data-skill="75"] {
+            background: conic-gradient(#00bcd4 0% 75%, #f7f8f9 75% 100%);
+        }
+        .circle-progress[data-skill="45"] {
+            background: conic-gradient(#00bcd4 0% 80%, #f7f8f9 80% 100%);
+        }
+
+        .skill-level {
+            font-size: 1.2rem;
+            color: #00bcd4;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .social-icon {
+            font-size: 2.2rem;
+            /* Slightly bigger icons */
+            color: #ffffff;
+            width: 60px;
+            height: 60px;
+            background-color: #0d1222;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background-color: #00bcd4;
+            transform: scale(1.15);
+            box-shadow: 0 4px 12px rgba(0, 188, 212, 0.5);
+            /* Adding glow effect */
+        }
+
+        /* Call to Action Button */
+        .cta-button {
+            padding: 14px 36px;
+            background-color: #00bcd4;
+            color: #ffffff;
+            font-size: 1.3rem;
+            font-weight: 700;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff5733;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(255, 87, 51, 0.3);
+            /* Button glow effect */
+        }
+
+        /* Carousel animation */
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-80%);
+            }
+
+            50% {
+                transform: translateX(-150%);
+            }
+
+            75% {
+                transform: translateX(-200%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Animation for Skill Items */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media only screen and (min-width: 200px) and (max-width: 1024px) {
+            .skills-carousel {
+                flex-direction: column;
+                align-items: center;
+                animation: slide 10s infinite linear;
+            }
+
+            .skill-item {
+                margin-bottom: 10px;
+                margin-top: 2rem;
+            }
+
+            .skills h3 {
+                font-size: 2.2rem;
+                /* Smaller size for mobile */
+            }
+
+            .circle-progress {
+                width: 120px;
+                height: 120px;
+                /* Smaller circles for mobile */
+            }
+        }
+
+
+        /* Projects Section */
+
+        #projects {
+            padding: 80px 0;
+            background-color: #0c0c0c;
+            /* Dark background for deep contrast */
+            color: white;
+            position: relative;
+        }
+
+        /* Header Styling */
+        #projects h2 {
+            font-size: 32px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #00bcd4;
+            /* Cyan highlights for a fresh modern look */
+            letter-spacing: 2px;
+            margin-bottom: 60px;
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Header underline with animation */
+        #projects h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: #ff4081;
+            /* Vibrant pink underline */
+            border-radius: 5px;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        /* Project Card Wrapper for 3D flip */
+        .project-card-wrapper {
+            perspective: 1200px;
+            /* 3D effect depth */
+        }
+
+        /* Base card styling */
+        .project-card {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background-color: #1a1a1a;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            /* Deep shadows for a floating effect */
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease-in-out;
+            /* Smooth flip transition */
+        }
+
+        /* Flip effect */
+        .project-card-wrapper:hover .project-card {
+            transform: rotateY(180deg);
+            /* Flip on hover */
+        }
+
+        /* Front of the card */
+        .project-card .front {
+            backface-visibility: hidden;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #333, #222);
+        }
+
+        /* Image Styling */
+        .card-img-wrapper {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Zoom effect on image hover */
+        .project-card:hover img {
+            transform: scale(1.2);
+        }
+
+        /* Card Title */
+        .card-title {
+            font-size: 24px;
+            color: #fff;
+            font-weight: 700;
+            margin-top: 20px;
+            transition: color 0.3s ease;
+            text-align: center;
+        }
+
+        /* Card Description */
+        .card-text {
+            font-size: 16px;
+            color: #bbb;
+            margin: 15px 0;
+            text-align: center;
+            line-height: 1.4;
+            transition: color 0.3s ease;
+        }
+
+        /* Card Button */
+        .project-btn {
+            background-color: #ff4081;
+            /* Soft pink button for contrast */
+            color: white;
+            padding: 12px 28px;
+            border-radius: 25px;
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        /* Button Hover Effect */
+        .project-btn:hover {
+            background-color: #00bcd4;
+            /* Cyan color on hover */
+            transform: translateY(-5px);
+            box-shadow: 0 5px 30px rgba(0, 188, 212, 0.4);
+            /* Cyan glow */
+        }
+
+        /* Back of the card (visible after flip) */
+        .project-card .back {
+            background-color: #1e1e1e;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform: rotateY(180deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        /* Back Content */
+        .project-card .back h5 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #00bcd4;
+            /* Highlighted in Cyan */
+        }
+
+        .project-card .back p {
+            font-size: 16px;
+            color: #bbb;
+            margin-bottom: 25px;
+        }
+
+        .project-card .back .project-btn {
+            background-color: #00bcd4;
+            /* Cyan button */
+            border: none;
+        }
+
+        /* Card Hover Effects (Back) */
+        .project-card-wrapper:hover .back {
+            background-color: #333;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 767px) {
+            .project-card-wrapper {
+                width: 100%;
+                /* Full width on mobile */
+                margin-bottom: 30px;
+            }
+
+            .project-card {
+                height: 350px;
+            }
+            .project-card  img{
+                height: 100%;
+            }
+
+            #projects h2 {
+                font-size: 32px;
+            }
+
+            .card-title {
+                font-size: 20px;
+            }
+
+            .project-btn {
+                font-size: 14px;
+            }
+        }
+
+        /* Animation for Header Underline */
+        @keyframes slideIn {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 60px;
+            }
+        }
+
+        /* hobbies */
+
+        /* Hobbies Section Styling */
+        .hobbies-section {
+            padding: 80px 0;
+            background-color: #111;
+            /* Dark background for contrast */
+            color: #00bcd4;
+            align-items: center;
+        }
+
+        /* Section Title Styling */
+        .hobbies-section .section-title {
+            font-size: 32px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #00bcd4;
+            /* Cyan for emphasis */
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Header underline with animation */
+        .hobbies-section .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: #ff4081;
+            /* Pink underline */
+            border-radius: 5px;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        /* Hobby Card Styling */
+        .hobby-card {
+            background-color: #222;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            align-items: center;
+            margin: 10px 10px;
+        }
+
+        /* Image Wrapper (with hover effect) */
+        .hobby-img-wrapper {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .hobby-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        /* Hover effect for image (zoom effect) */
+        .hobby-card:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Hobby Details Styling */
+        .hobby-details {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Hobby Title Styling */
+        .hobby-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #00bcd4;
+            /* Cyan for titles */
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        /* Description text for each hobby */
+        .hobby-text {
+            font-size: 16px;
+            color: #bbb;
+            margin-bottom: 25px;
+        }
+
+        /* Hover effect for hobby card */
+        .hobby-card:hover {
+            transform: translateY(-10px);
+            /* Lift effect */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            /* Enhanced shadow */
+            background-color: #333;
+        }
+
+        /* Responsive Design for smaller screens */
+        @media only screen and (min-width: 200px) and (max-width: 1024px) {
+            .hobby-card {
+                margin-bottom: 30px;
+            }
+
+            .col-md-4 {
+                width: 100%;
+                /* Stack the cards */
+            }
+
+            .hobbies-section .section-title {
+                font-size: 30px;
+            }
+
+            .hobby-card img {
+                height: 100%;
+            }
+        }
+
+        /* Animation for Header Underline */
+        @keyframes slideIn {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 60px;
+            }
+        }
+
+
+
+        /* Contact Section Styling */
+        .contact-section {
+            padding: 80px 0;
+            background-color: #0d1b2a;
+            /* Dark blue background */
+            color: white;
+            position: relative;
+        }
+
+        /* Section Title Styling */
+        .contact-section h2 {
+            font-size: 42px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #1e90ff;
+            /* Light Blue for emphasis */
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+            transition: color 0.4s ease-in-out, transform 0.4s ease;
+        }
+
+        /* Header underline with animation */
+        .contact-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: #ff4081;
+            /* Pink underline */
+            border-radius: 5px;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        /* Section Description */
+        .contact-section p {
+            font-size: 18px;
+            color: #bbb;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+
+        /* Form Styling */
+        .form-control {
+            background-color: #333;
+            color: rgb(28, 7, 7);
+            border: 1px solid #444;
+            border-radius: 10px;
+            padding: 12px 20px;
+            font-size: 16px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Focus effect for form fields */
+        .form-control:focus {
+            border-color: #1e90ff;
+            /* Light blue border on focus */
+            box-shadow: 0 0 10px rgba(30, 144, 255, 0.5);
+            /* Light blue glow */
+            background-color: #a7a3a3;
+            /* Slightly darker background when focused */
+        }
+
+        /* Message Textarea */
+        textarea.form-control {
+            height: 180px;
+            resize: none;
+        }
+
+        /* Button Styling */
+        .btn-primary {
+            background-color: #ff4081;
+            /* Pink button */
+            color: white;
+            border: none;
+            padding: 14px 35px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        /* Button Hover Effect */
+        .btn-primary:hover {
+            background-color: #07c0d8;
+            /* Light Blue on hover */
+            transform: translateY(-5px);
+            /* Lift effect */
+            box-shadow: 0 5px 30px rgba(30, 144, 255, 0.4);
+            /* Blue glow */
+        }
+
+        /* Heading Hover Effect */
+        .contact-section h2:hover {
+            color: #ff4081;
+            /* Change to pink on hover */
+            transform: translateY(-3px);
+            /* Slight lift effect */
+        }
+
+        /* Responsive Form Styling */
+        @media (max-width: 767px) {
+            .contact-section h2 {
+                font-size: 32px;
+            }
+
+            .contact-section p {
+                font-size: 16px;
+            }
+
+            .form-control {
+                font-size: 14px;
+                padding: 12px 15px;
+            }
+
+            .btn-primary {
+                font-size: 16px;
+                padding: 12px 30px;
+            }
+        }
+
+        /* Animation for Header Underline */
+        @keyframes slideIn {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 60px;
+            }
+        }
+
+
+
+        /* Footer */
+        /* Footer Styling */
+        .footer {
+            background-color: #111;
+            /* Dark background for contrast */
+            color: white;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            position: relative;
+        }
+
+        /* Footer Text Styling */
+        .footer-text {
+            font-size: 18px;
+            color: #bbb;
+            margin-bottom: 30px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        /* Hover effect for footer text */
+        .footer-text:hover {
+            color: #00bcd4;
+            /* Change color on hover */
+            cursor: pointer;
+        }
+
+        /* Social Icons Container */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            /* Space between the icons */
+            flex-wrap: wrap;
+        }
+
+        /* Social Icon Styling */
+        .social-icon {
+            font-size: 24px;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease, transform 0.3s ease;
+            font-weight: 500;
+        }
+
+        .social-icon span {
+            margin-left: 8px;
+            /* Space between the icon and text */
+            font-size: 16px;
+            opacity: 0.8;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Hover Effect for Social Icons */
+        .social-icon:hover {
+            color: #00bcd4;
+            /* Cyan color for hover effect */
+            transform: translateY(-5px);
+            /* Slight lift effect */
+        }
+
+        .social-icon:hover span {
+            opacity: 1;
+            transform: translateX(5px);
+            /* Text shift effect */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .footer {
+                padding: 40px 20px;
+            }
+
+            .footer-text {
+                font-size: 16px;
+            }
+
+            .social-icons {
+                gap: 20px;
+            }
+
+            .social-icon {
+                font-size: 22px;
+            }
+
+            .social-icon span {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer-text {
+                font-size: 14px;
+            }
+
+            .social-icons {
+                gap: 15px;
+            }
+
+            .social-icon {
+                font-size: 20px;
+            }
+
+            .social-icon span {
+                font-size: 12px;
+            }
+        }
+
+        /* responsive navbar */
+        .head{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.3rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .head::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0); 
+            backdrop-filter: blur(50px);
+            z-index: -1;
+        }
+        .head::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(4, 247, 251, 0.4), transparent);
+            transition: .5s;
+        }
+        .head:hover::after{
+            left: 100%;
+        }
+
+        .navbar-brand {
+            font-size: 2rem;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .bar a {
+            font-size: 1.15rem;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 2rem;
+        }
+
+        #check {
+            display: none;
+        }
+
+        .icons {
+            position: absolute;
+            right: 5%;
+            font-size: 2.8rem;
+            color: #fff;
+            cursor: pointer;
+            display: none;
+        }
+
+        @media (max-width: 992px) {
+            .header {
+                padding: 1.3rem 5%;
+            }
+        }
+
+        @media only screen and (min-width: 200px) and (max-width: 1024px) {
+            .icons {
+                display: inline-flex;
+            }
+
+            #check:checked~.icons #menu-icon {
+                display: none;
+            }
+
+            .icons #close-icon {
+                display: none;
+            }
+
+            #check:checked~.icons #close-icon {
+                display: block;
+            }
+
+
+            .bar {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 0;
+                background: rgba(0, 0, 0, .1);
+                backdrop-filter: blur(50px);
+                box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+                overflow: hidden;
+                transition: .3s ease;
+            }
+            #check:checked~.bar{
+                height: 17.7rem;
+            }
+            .bar a {
+                display: block;
+                font-size: 1.1rem;
+                margin: 1.5rem 0;
+                text-align: center;
+                transform: translate(-50%);
+                opacity: 0;
+                transition: .3s ease;
+            }
+            #check:checked~.bar a{
+                transform: translate(0);
+                opacity: 1;
+                transition-delay: calc(.20s * var(--i));
+            }
+        }
+
+
+        
+/* Skill Bar Container */
+.skill-bar {
+  width: 100%; /* Adjust based on your layout */
+  height: 40px;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #f3f4f6, #e2e8f0); /* Smooth gradient background */
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Slider container */
+.skills-slider {
+  display: flex;
+  animation: slide 15s linear infinite; /* Infinite sliding animation */
+  width: max-content;
+}
+
+/* Each Skill */
+.skill {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  
+  /* Updated Text Color: Black/White/Dark Blue */
+  color: #1a202c; /* Dark Blue */
+  background: #fff; /* White background */
+  border-radius: 20px;
+  padding: 5px 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for skills with color contrast */
+.skill:hover {
+  transform: scale(1.1); /* Slight zoom */
+  background-color: #1a202c; /* Dark Blue background on hover */
+  color: #ffffff; /* White text on hover */
+}
+
+/* Keyframe for sliding animation (from right to left) */
+@keyframes slide {
+  0% {
+    transform: translateX(100%); /* Starts from the right */
+  }
+  100% {
+    transform: translateX(-100%); /* Slides the elements leftwards */
+  }
+}
+
+
+    </style>
+
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="head">
+        <a class="navbar-brand" href="index.html"><i class="bi bi-house-fill"></i> Home</a>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+
+        <nav class="bar">
+            <a  href="#about"  style="--i:0;"><i class="bi bi-person-fill"></i> About</a>
+            <a href="#skills" style="--i:1;"><i class="bi bi-gear-fill"></i> Skills</a>
+            <a  href="#hobbies" style="--i:2;"><i class="bi bi-columns-gap"></i> Hobbies</a>
+            <a  href="#hobbies" style="--i:3;"><i class="bi bi-layers-fill"></i> Projects</a>
+            <a href="#contact" style="--i:4;"><i class="bi bi-envelope-fill"></i> Contact</a>
+        </nav>
+    </header>
+   
+
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="home-container">
+            <div class="text-content">
+                <h1 class="w3-animate-right" style="animation-duration:1s; color: #f8f9fa; font-size: xx-large;">Welcome
+                    to My Portfolio </h1>
+                <h1>I'm Muhammad Irfan</h1>
+                <h3>Web Developer</h3>
+                <p class="description">Transforming ideas into reality with creative and modern solutions.</p>
+
+                <!-- Social Media Icons (Now under the text) -->
+                <div class="social-icons">
+                    <a href="https://web.facebook.com/profile.php?id=61562378504974" target="_blank"
+                        class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com" target="_blank" class="social-icon"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/irfan-khan1074/" target="_blank" class="social-icon"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.github.com" target="_blank" class="social-icon"><i
+                            class="fab fa-github"></i></a>
+                </div>
+
+                <!-- Call to Action Button -->
+                <a href="https://web.whatsapp.com/923063892102" class="cta-button" style="padding: 10px;">Contact Me</a>
+            </div>
+           <div class="pic">
+            <div class="img-shadow"></div>
+
+            <div class="image-wrapper">
+                <img src="irf1.jpg" alt="Innovative Solutions" class="home-image">
+            </div>
+           </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="about-header">
+                <h2>About Me</h2>
+            </div>
+ 
+            <!-- Profile Image with Hover Effect -->
+            <div class="about-image-wrapper">
+                <img src="irf2.jpg" alt="Your Image" class="about-image">
+            </div>
+
+            <!-- Animated Description with "Read More" Button -->
+            <div class="about-description">
+                <p class="description-text">I am a dedicated web developer with a passion for crafting clean, responsive
+                    websites that drive engagement and business results. Let’s build something great together!</p>
+                <a href="#more-about" class="cta-button">Read More</a>
+            </div>
+
+            <!-- Optional: Add Skill Icons or Expertise Icons -->
+            <div class="skills-icons">
+                <i class="fab fa-html5"></i>
+                <i class="fab fa-css3-alt"></i>
+                <i class="fab fa-js"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section>
+        <div class="skills" id="skills">
+            <div class="about-header">
+                <h2> My Skills </h2>
+            </div>
+            <div class="skill-bar">
+                <div class="skills-slider">
+                  <div class="skill">HTML</div>
+                  <div class="skil">CSS</div>
+                  <div class="skill">JavaScript</div>
+                  <div class="skill">React</div>
+                  <div class="skill">Python</div>
+                  <div class="skill">Graphic Designing</div>
+                </div>
+              </div>
+              
+            <!-- Carousel for skills -->
+            <div class="coding" style="text-align: left; color: #00ffff; margin-top: 2rem; font-weight: 900;"><h3>Web development:</h3></div>
+            <div class="skills-carousel">
+                <div class="skill-item">
+                    <div class="skill-name">HTML</div>
+                    <div class="circle-progress" data-skill="90"></div>
+                    <div class="skill-level">90%</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">CSS</div>
+                    <div class="circle-progress" data-skill="85"></div>
+                    <div class="skill-level">85%</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">JavaScript</div>
+                    <div class="circle-progress" data-skill="80"></div>
+                    <div class="skill-level">80%</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">React</div>
+                    <div class="circle-progress" data-skill="75"></div>
+                    <div class="skill-level">75%</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Python</div>
+                    <div class="circle-progress" data-skill="45"></div>
+                    <div class="skill-level">45%</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Graphics</div>
+                    <div class="circle-progress" data-skill="85"></div>
+                    <div class="skill-level">85%</div>
+                </div>
+            </div>
+            <div class="coding" style="text-align: left; color: #00ffff; margin-top: 2rem; font-weight: 900;"><h3>Graphic Designing:</h3></div>
+            <div class="skills-carousel">
+                <div class="skill-item">
+                    <div class="skill-name">Illustrator</div>
+                    <div class="circle-progress" data-skill="90"></div>
+                    <div class="skill-level">90%</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Photoshop</div>
+                    <div class="circle-progress" data-skill="85"></div>
+                    <div class="skill-level">85%</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Correl Draw</div>
+                    <div class="circle-progress" data-skill="80"></div>
+                    <div class="skill-level">80%</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Canva</div>
+                    <div class="circle-progress" data-skill="75"></div>
+                    <div class="skill-level">75%</div>
+                </div>
+                
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="https://twitter.com" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com" class="social-icon" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+
+            <!-- Call to Action Button -->
+            <a href="#contact" class="cta-button">Let’s Connect!</a>
+        </div>
+    </section>
+
+    <!-- Hobbies -->
+    <section id="hobbies" class="hobbies-section">
+        <div class="container">
+            <h2 class="section-title text-center text-cyan">My Hobbies</h2>
+            <p class="text-center text-white">Here are some things I enjoy doing in my free time.</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="hobby-card">
+                        <div class="hobby-img-wrapper">
+                            <img src="cal1.jpg" alt="Hobby 1">
+
+                        </div>
+                        <div class="hobby-details">
+                            <h3 class="hobby-title">Caligraphy</h3>
+                            <p class="hobby-text">Calligraphy: The ancient art of beautiful handwriting, using
+                                traditional techniques and tools to create elegant, expressive, and unique
+                                lettering styles and most fastinating hobby for me. that's very pieceful.</p>
+                        </div>
+                        <a href="index1.html" class="cta-button" style="margin:20px">View More</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="hobby-card">
+                        <div class="hobby-img-wrapper">
+                            <img src="paint.jpg" alt="Hobby 3">
+                        </div>
+                        <div class="hobby-details">
+                            <h3 class="hobby-title">Painting</h3>
+                            <p class="hobby-text">Artistic Expressions: Sketching and painting are creative outlets that
+                                quick, expressive drawings, while painting evokes emotions and connections through
+                                vibrant, colorful brushstrokes, textures, and techniques.</p>
+                        </div>
+                        <a href="index2.html" class="cta-button" style="margin:20px">View More</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="hobby-card">
+                        <div class="hobby-img-wrapper">
+                            <img src="peer.JPG" alt="Hobby 3">
+                        </div>
+                        <div class="hobby-details">
+                            <h3 class="hobby-title">Reading</h3>
+                            <p class="hobby-text">Reading is my favorite hobby, allowing me to escape 
+                                reality and explore new worlds. It broadens my knowledge, sparks my 
+                                imagination, and helps me relax. With a good book, I can travel 
+                                anywhere and experience new things.</p>
+                        </div>
+                        <a href="index3.html" class="cta-button" style="margin:20px">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="text-center mb-5">My Projects</h2>
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card">
+                        <div class="card-img-wrapper">
+                            <img src="netf.JPG" class="card-img-top" alt="Project 1">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Netflix Clone</h5>
+                            <p class="card-text">VistaFlix: A streaming service that offers a vast library of movies, TV
+                                shows, and original content, personalized recommendations, and seamless playback
+                                across devices.</p>
+                            <a href="https://www.netflix.com/pk/" class="btn project-btn">Discover More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card">
+                        <div class="card-img-wrapper">
+                            <img src="spoti.JPG" class="card-img-top" alt="Project 2">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Spotify Clone</h5>
+                            <p class="card-text">MusicMate: A personalized music streaming app that allows users to
+                                discover, play, and share their favorite songs and playlists.</p>
+                            <a href="https://open.spotify.com/" class="btn project-btn">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card">
+                        <div class="card-img-wrapper">
+                            <img src="proj.JPG" class="card-img-top" alt="Project 3">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Bitrix24 Clone</h5>
+                            <p class="card-text">Organize and manage your team like a boss with Bitrix24, a project
+                                management software packing more capabilities than you can imagine.</p>
+                            <a href="https://www.bitrix24.com/tasks/project_management_software.php?utm_source=google&utm_medium=cpc&utm_campaign=20757919572-153878091965&gad_source=1&gclid=CjwKCAiAl4a6BhBqEiwAqvrquozjryg2-iDNR0QTk5dwqiIIJnf2SnKuaPQGnBM1u6FdXIW02V3EFhoCocgQAvD_BwE"
+                                class="btn project-btn">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title text-center text-cyan" style="color:#00ffff">Contact Me</h2>
+            <p class="text-center text-white">Feel free to reach out! I’d love to hear from you.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form action="#" method="POST">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Your Email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" onclick="location.href='mailto:ranairfan1074@gmail.com'">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+
+    <footer class="footer-section pt-5">
+        <div class="container">
+            <div class="row">
+                <!-- About Me Section -->
+                <div id="f1" class="col-md-4" style="animation-duration:1.3s ;">
+                    <div>
+                        <h5 class="text-uppercase text-mint" style="color:#00ffff">&nbsp; <b>About Me</b></h5>
+                    </div>
+
+                    <div class="aboutme">
+                        <p class="p-2 ">
+                            <b>Muhammad Irfan</b> is here, a Graphic Designer and Web Developer with a passion for
+                            creating
+                            innovative
+                            and effective digital solutions. From network configuration to web development, I bring
+                            expertise and creativity to every project.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Quick Links Section -->
+                <div id="f2" class="col-md-4 ps-5" style="animation-duration:1.9s ;">
+                    <h5 class="text-uppercase text-mint" style="color:#00ffff"><b>Quick Links</b></h5>
+                    <ul class="list-unstyled ">
+                        <li><i class="bi bi-house-fill"></i>&nbsp;<a href="#home" class="footer-link">Home</a></li>
+                        <li><i class="bi bi-person-fill"></i>&nbsp;<a href="#about" class="footer-link">About Me</a>
+                        </li>
+                        <li><i class="bi bi-gear-fill"></i>&nbsp;<a href="#skills" class="footer-link">Skills</a>
+                        </li>
+                        </li>
+                        <li><i class="bi bi-columns-gap"></i>&nbsp;<a href="#hobbies" class="footer-link">Hobbies</a>
+                        </li>
+                        <li><i class="bi bi-layers-fill"></i>&nbsp;<a href="#projects" class="footer-link">Projects</a>
+                        </li>
+                        <li><i class="bi bi-envelope-fill"></i>&nbsp;<a href="#contact" class="footer-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Connect with Me Section -->
+                <div id="f3" class="col-md-4 " style="animation-duration:2.3s ;">
+                    <h5 class="text-uppercase text-mint" style="color:#00ffff"><b>Connect with Me:</b></h5>
+                    <div class="social-icons mt-4">
+                        <a href="https://www.facebook.com" class="social-icon" target="_blank">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://www.twitter.com" class="social-icon" target="_blank">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com" class="social-icon" target="_blank">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="https://www.github.com" class="social-icon" target="_blank">
+                            <i class="bi bi-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <p class="mb-0">&copy; 2024 <b>Irfan Khan</b>. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
